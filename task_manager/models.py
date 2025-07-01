@@ -50,7 +50,7 @@ class Task(ABC):
         }
     
     def __str__(self):
-        return f"Task({self.id}): {self.title} [{self.status.value}]"
+        return f"Task({self.task_id}): {self.title} [{self.status.value}]"
     
 class SimpleTask(Task):
     "Basic Simple Task"
@@ -105,5 +105,5 @@ class TaskFactory:
             return RecurringTask(title, description, kwargs.get('frequency', 'daily'))
         else:
             raise ValueError(f"Unknown task type: {task_type}")
-    
-        
+
+

@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
-from task_manager.models import TaskFactory, Task, TaskType
-from task_manager.storage import InMemoryStorage, Storage
+from models import TaskFactory, Task, TaskType
+from storage import InMemoryStorage, Storage
 from typing import List
 
 class TaskManager:
