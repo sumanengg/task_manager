@@ -1,7 +1,6 @@
 from abc import ABC, abstractmethod
-from task_manager.models import TaskFactory, Task, TaskType, TaskStatus
+from task_manager.models import TaskFactory, Task, TaskType
 from task_manager.storage import InMemoryStorage, Storage
-from task_manager.exceptions import TaskAlreadyCompletedError
 from typing import List
 
 class TaskManager:
@@ -41,8 +40,6 @@ class TaskManager:
     def complete_task(self, task_id: int) -> bool:
         "Complete a task and update it status"
         task = self.storage.get_task(task_id)
-        if task.status == TaskStatus.COMPLETED:
-            raise TaskAlreadyCompletedError(f"Task ({task_id}) already completed!! ")
         if task:
             task.mark_completed()
             self.storage.update_task(task=task)

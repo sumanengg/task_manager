@@ -1,0 +1,16 @@
+README.md
+setup.py
+task_manager/__init__.py
+task_manager/cli.py
+task_manager/main.py
+task_manager/manager.py
+task_manager/models.py
+task_manager/storage.py
+task_manager.egg-info/PKG-INFO
+task_manager.egg-info/SOURCES.txt
+task_manager.egg-info/dependency_links.txt
+task_manager.egg-info/entry_points.txt
+task_manager.egg-info/requires.txt
+task_manager.egg-info/top_level.txt
+test/__init__.py
+test/test_manager.py

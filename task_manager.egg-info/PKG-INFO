@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: task_manager
+Version: 0.1.0
+Summary: A simple task manager application.
+Author: sumanengg.sg@gmail.com
+Requires-Python: >=3.6
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"

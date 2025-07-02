@@ -8,7 +8,7 @@ def test_singleton():
 
 def test_create_task():
     manager = TaskManager()
-    task = manager.create_task(TaskType.SIMPLE, "Test", "Testing singleton task creation.")
+    task = manager.create_task(TaskType.SIMPLE, "Test", "Testing singleton task creation")
     assert task.title == "Test"
     assert task.description == "Testing singleton task creation."
 

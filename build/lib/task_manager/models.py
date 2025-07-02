@@ -3,7 +3,6 @@ import uuid
 from datetime import datetime
 from abc import ABC, abstractmethod
 from typing import Dict, Optional, Any
-from task_manager.exceptions import InvalidTaskTypeError
 
 class TaskStatus(Enum):
     COMPLETED = "completed"
@@ -105,6 +104,6 @@ class TaskFactory:
         elif task_type == TaskType.RECURRING:
             return RecurringTask(title, description, kwargs.get('frequency', 'daily'))
         else:
-            raise InvalidTaskTypeError(f"Unknown task type: {task_type}")
+            raise ValueError(f"Unknown task type: {task_type}")
 
 

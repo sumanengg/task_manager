@@ -1,6 +1,5 @@
 from task_manager.manager import TaskManager
 from task_manager.models import TaskType
-from task_manager.exceptions import InvalidTaskTypeError
 class TaskManagerCli:
 
     def __init__(self):
@@ -82,11 +81,8 @@ Available commands:
             
             print(f"Task created: {task}")
         
-        except InvalidTaskTypeError as e:
-            raise InvalidTaskTypeError(f"Error: {e}")
-        except Exception as e:
-            print(F"Error: {e}")
-            raise
+        except ValueError as e:
+            print(f"Error: {e}")
     
     def list_tasks(self):
         """List all tasks"""
