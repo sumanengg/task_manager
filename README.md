@@ -52,4 +52,3 @@ python -m test.test_manager
 - Extend `Storage` for persistent storage (e.g., file or database).
 
 ## License
-MIT
