@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from task_manager.models import Task
+from models import Task
 from typing import Optional, Any, Dict, List
 class Storage(ABC):
     """A class to handle storage operations."""
